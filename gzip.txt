@@ -1,0 +1,6 @@
+gzip.txt
+Created Thu Sep 19 08:32:49 AKDT 2019
+Copyright (C) 2019 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+gzip, gunzip, zcat - compress or expand files
