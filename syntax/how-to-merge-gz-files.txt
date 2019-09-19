@@ -1,0 +1,41 @@
+how-to-merge-gz-files.txt
+Created Thu Sep 19 08:41:45 AKDT 2019
+Copyright (C) 2019 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+How to merge gz files
+
+
+"Fast Concatenation of Multiple GZip Files
+-----------------------------------------
+A gzip file consists of a series of "members" (compressed data sets).
+[...] The members simply appear one after another in the file, with
+no additional information before, between, or after them.
+
+  cat file1.gz file2.gz file3.gz > allfiles.gz
+
+modified 7 months ago by RamRS written 6.0 years ago by Pierre Lindenbaum 
+
+
+This worked well for me.  Note that you can confirm that this works in
+most cases by doing something like the following:
+
+  cat file1.gz file2.gz file3.gz > allfiles-cat.gz
+  zcat file1.gz file2.gz file3.gz | gzip -c > allfiles-zcat.gz
+  zcat allfiles-cat.gz | md5sum
+  zcat allfiles-zcat.gz | md5sum
+
+The resulting hash/message digests should be identical.
+
+My experience is that the zcat method is around 40x slower, but the cat
+method's resulting file is a few percent bigger depending on your the
+gzip parameters used in the methods.
+
+modified 7 months ago by RamRS ♦ 24k • written 4.2 years ago by alan"
+--www.biostars.org/p/81924/
+
+
+Links
+=====
+Question: How To Merge Two Fastq.Gz Files?
+https://www.biostars.org/p/81924/
