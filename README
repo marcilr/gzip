@@ -10,3 +10,6 @@ gzip.txt
 
 links.txt
   gzip related links
+
+syntax/
+  Syntax for gzip
