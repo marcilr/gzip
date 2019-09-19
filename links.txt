@@ -1,0 +1,12 @@
+links.txt
+Created Thu Sep 19 08:34:17 AKDT 2019
+Copyright (C) 2019 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+gzip related links
+
+
+Links
+=====
+gzip - Wikipedia
+https://en.wikipedia.org/wiki/Gzip
