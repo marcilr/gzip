@@ -1,0 +1,47 @@
+extract.txt
+Created Wed Sep 25 13:04:43 AKDT 2019
+Copyright (C) 2019 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Extract gzip file
+
+
+Use guzip command as follows:
+  $ gunzip file.gz
+ 
+OR
+
+  $ gzip -d file.gz
+
+--www.cyberciti.biz/faq/
+https://www.cyberciti.biz/faq/
+
+
+Example
+=======
+Expand access_log_list.gz:
+$ ssh intdev
+$ cd /net/dnr-atwfs1/vol/vol1/weblogs/2019/07/
+$ du -h access_log_list.gz 
+915M	access_log_list.gz
+$
+$ mkdir tmp
+$ cd tmp\
+# time gzip -d ../access_log_list.gz
+
+real	1m2.998s
+user	0m43.585s
+sys	0m11.589s
+#
+
+Above command did not work.  There is only 911M available on /net/dnr-atwfs1
+The access_log_list.gz log is 
+
+
+
+Links
+=====
+Linux / UNIX command to open .gz files
+nixCraft
+Linux and Unix tutorials for new and seasoned sysadmin
+https://www.cyberciti.biz/faq/
